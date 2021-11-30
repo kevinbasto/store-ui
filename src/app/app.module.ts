@@ -10,6 +10,8 @@ import { ProductsComponent } from './products/products.component';
 import { TransactionsComponent } from './transactions/transactions.component';
 import { PurchasesComponent } from './purchases/purchases.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+
 import { MatCardModule } from '@angular/material/card';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
@@ -32,6 +34,8 @@ import { MatRadioModule } from '@angular/material/radio';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
+    // material imports
     MatCardModule,
     MatDialogModule,
     MatInputModule,

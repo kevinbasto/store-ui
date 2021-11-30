@@ -1,1 +1,29 @@
-<p>roles works!</p>
+<div style="width: 100vw; height: 100vh; display: grid; place-content: center;">
+    <mat-card class="mat-elevation-z8">
+        <div>
+            <h1>
+                tabla de roles
+            </h1>
+        </div>
+        <table mat-table [dataSource]="roles">
+            <!-- Role id -->
+            <ng-container matColumnDef="roleId">
+                <th mat-header-cell *matHeaderCellDef>No.</th>
+                <td mat-cell *matCellDef="let role">{{role.roleId}}</td>
+            </ng-container>
+            <!-- Role name -->
+            <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef>No.</th>
+                <td mat-cell *matCellDef="let role">{{role.name}}</td>
+            </ng-container>
+            <!-- Role Authority-->
+            <ng-container matColumnDef="authority">
+                <th mat-header-cell *matHeaderCellDef>No.</th>
+                <td mat-cell *matCellDef="let role">{{role.authority}}</td>
+            </ng-container>
+            
+            <tr mat-header-row *matHeaderRowDef="tableHeaders"></tr>
+            <tr mat-row *matRowDef="let row; columns: tableHeaders;"></tr>
+        </table>
+    </mat-card>
+</div>
