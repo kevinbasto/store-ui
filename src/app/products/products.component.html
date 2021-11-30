@@ -1,0 +1,64 @@
+<div class="table-container">
+    <mat-card class="mat-elevation-z8">
+        <div>
+            <h1>
+                products table
+            </h1>
+        </div>
+        <div style="width: 100%; display: flex; justify-content: flex-end;">
+            <button mat-raised-button color="primary" (click)="createProduct()">
+                Crear Producto
+            </button>
+        </div>
+        <table mat-table [dataSource]="products">
+            <!-- productId -->
+            <ng-container matColumnDef="productId">
+                <th mat-header-cell *matHeaderCellDef>
+                    No.
+                </th>
+                <td mat-cell *matCellDef="let product">
+                    {{product.productId}}
+                </td>
+            </ng-container>
+            <!-- product name -->
+            <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef>
+                    Nombre
+                </th>
+                <td mat-cell *matCellDef="let product">
+                    {{product.name}}
+                </td>
+            </ng-container>
+            <!-- product description -->
+            <ng-container matColumnDef="description">
+                <th mat-header-cell *matHeaderCellDef>
+                    Descripción
+                </th>
+                <td mat-cell *matCellDef="let product">
+                    {{product.description}}
+                </td>
+            </ng-container>
+            <!-- Product price-->
+            <ng-container matColumnDef="price">
+                <th mat-header-cell *matHeaderCellDef>
+                    Precio
+                </th>
+                <td mat-cell *matCellDef="let product">
+                    {{product.price}}
+                </td>
+            </ng-container>
+            <!-- picture -->
+            <ng-container matColumnDef="picture">
+                <th mat-header-cell *matHeaderCellDef>
+                    Imagen
+                </th>
+                <td mat-cell *matCellDef="let product">
+                    {{product.picture}}
+                </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="tableHeaders"></tr>
+            <tr mat-row *matRowDef="let row; columns: tableHeaders"></tr>
+        </table>
+    </mat-card>
+</div>
