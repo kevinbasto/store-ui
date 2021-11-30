@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from './entities/product';
+import { ProductsService } from './products.service';
 
 @Component({
   selector: 'app-products',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductsComponent implements OnInit {
 
-  constructor() { }
+  public tableHeaders = ["productId", "name", "description", "price", "picture"]
+  public products : Array<Product>;
+  public error : any;
+
+  constructor(
+    private productsService : ProductsService
+  ) { }
 
   ngOnInit(): void {
+    this.productsService.fetchProducts()
+    .then((result) => {
+      console.log(result);
+      this.products = result;
+    }).catch((err) => {
+      this.error = err;
+    });
   }
 
 }
