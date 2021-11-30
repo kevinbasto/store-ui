@@ -31,10 +31,10 @@
                 <input type="text" matInput formControlName="picture">
             </mat-form-field>
             <div style="display: flex; width: 100%; justify-content: space-between;">
-                <button type="button" mat-raised-button>
+                <button type="button" mat-raised-button (click)="goBack()">
                     Regresar
                 </button>
-                <button type="button" mat-raised-button color="warn">
+                <button type="button" mat-raised-button color="warn" (click)="deleteProduct()">
                     Eliminar
                 </button>
                 <button type="submit" mat-raised-button color="primary">
