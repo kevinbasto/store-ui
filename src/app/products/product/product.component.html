@@ -1,0 +1,46 @@
+<div class="table-container">
+    <mat-card class="mat-elevation-z8">
+        <div>
+            <h1>
+                Producto
+            </h1>
+        </div>
+        <form [formGroup]="productForm">
+            <mat-form-field style="width: 100%;">
+                <mat-label>
+                    Nombre del producto
+                </mat-label>
+                <input matInput type="text" formControlName="name">
+            </mat-form-field>
+            <mat-form-field style="width: 100%;">
+                <mat-label>
+                    Descripcion del producto
+                </mat-label>
+                <input matInput type="text" formControlName="description">
+            </mat-form-field>
+            <mat-form-field style="width: 100%;">
+                <mat-label>
+                    Precio
+                </mat-label>
+                <input type="number" matInput formControlName="price">
+            </mat-form-field>
+            <mat-form-field style="width: 100%;">
+                <mat-label>
+                    Picture
+                </mat-label>
+                <input type="text" matInput formControlName="picture">
+            </mat-form-field>
+            <div style="display: flex; width: 100%; justify-content: space-between;">
+                <button type="button" mat-raised-button>
+                    Regresar
+                </button>
+                <button type="button" mat-raised-button color="warn">
+                    Eliminar
+                </button>
+                <button type="submit" mat-raised-button color="primary">
+                    Guardar
+                </button>
+            </div>
+        </form>
+    </mat-card>
+</div>
