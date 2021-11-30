@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Product } from './entities/product';
 import { ProductsService } from './products.service';
 
@@ -14,7 +15,8 @@ export class ProductsComponent implements OnInit {
   public error : any;
 
   constructor(
-    private productsService : ProductsService
+    private productsService : ProductsService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -27,4 +29,7 @@ export class ProductsComponent implements OnInit {
     });
   }
 
+  createProduct(){
+    this.router.navigate(['/products/new']);
+  }
 }

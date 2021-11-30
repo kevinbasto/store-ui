@@ -12,7 +12,7 @@ import { ProductsService } from '../products.service';
 export class ProductComponent implements OnInit {
 
   public productForm : FormGroup;
-  private productId : string;
+  public productId : string;
   private product : Product
 
   constructor(
@@ -76,7 +76,7 @@ export class ProductComponent implements OnInit {
       .then((result) => {
         this.router.navigate(['/products'])
       }).catch((err) => {
-        
+        console.log(err);
       });
     }
   }

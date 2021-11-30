@@ -5,7 +5,7 @@
                 Producto
             </h1>
         </div>
-        <form [formGroup]="productForm">
+        <form [formGroup]="productForm" (submit)="submit()">
             <mat-form-field style="width: 100%;">
                 <mat-label>
                     Nombre del producto
@@ -34,7 +34,7 @@
                 <button type="button" mat-raised-button (click)="goBack()">
                     Regresar
                 </button>
-                <button type="button" mat-raised-button color="warn" (click)="deleteProduct()">
+                <button type="button" mat-raised-button color="warn" (click)="deleteProduct()" *ngIf="productId != 'new'">
                     Eliminar
                 </button>
                 <button type="submit" mat-raised-button color="primary">

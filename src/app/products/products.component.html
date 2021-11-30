@@ -5,6 +5,11 @@
                 products table
             </h1>
         </div>
+        <div style="width: 100%; display: flex; justify-content: flex-end;">
+            <button mat-raised-button color="primary" (click)="createProduct()">
+                Crear Producto
+            </button>
+        </div>
         <table mat-table [dataSource]="products">
             <!-- productId -->
             <ng-container matColumnDef="productId">
