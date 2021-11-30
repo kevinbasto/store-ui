@@ -9,6 +9,7 @@ import { AccountsComponent } from './accounts/accounts.component';
 import { ProductsComponent } from './products/products.component';
 import { TransactionsComponent } from './transactions/transactions.component';
 import { PurchasesComponent } from './purchases/purchases.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { PurchasesComponent } from './purchases/purchases.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
